@@ -1,7 +1,7 @@
 import React from "react";
 
 function Fees() {
-  return <main>Fees</main>;
+  return <main></main>;
 }
 
 export default Fees;

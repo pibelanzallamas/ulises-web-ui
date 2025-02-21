@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav>
-      <p>
+      <Link to="/">
         Ulises Web/UI <span> 🖼️ 👨‍🎨</span>
-      </p>
+      </Link>
       <ul className="menu-list">
         <Link to="/about">Sobre Nosotros</Link>
         <Link to="/works">Mis Sitios</Link>

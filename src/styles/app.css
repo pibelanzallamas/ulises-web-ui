@@ -1,6 +1,6 @@
 nav {
   display: flex;
-  padding: 3rem 4rem;
+  padding: 3rem 3.5rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -17,10 +17,60 @@ nav span {
   font-size: 1.1rem;
 }
 
+.works {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.work-images {
+  position: relative;
+}
+
+.work-arrows {
+  position: absolute;
+  top: 45%;
+}
+
+.work-image {
+  width: 700px;
+}
+
+.work-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.work-youtube-link {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.work-youtube-link img {
+  width: 30px;
+}
+
+.work-links {
+  text-decoration: underline;
+  text-decoration-thickness: 1.3px;
+  text-underline-offset: 5px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.all-all {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #D9D9D9;
   font-family: Arial, Helvetica, sans-serif;
 }
 
