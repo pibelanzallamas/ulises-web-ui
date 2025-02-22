@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap");
 nav {
   display: flex;
   padding: 2.3rem 2.5rem;
@@ -49,12 +50,6 @@ nav span {
   width: 30px;
 }
 
-.work-links {
-  text-decoration: underline;
-  text-decoration-thickness: 1.3px;
-  text-underline-offset: 5px;
-}
-
 .work-arrows {
   cursor: pointer;
 }
@@ -64,6 +59,31 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 3rem;
+  width: 100ch;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.about h3 {
+  color: #6791E0;
+  font-size: 2rem;
+  font-family: Oleo Script Swash Caps;
+}
+.about p {
+  text-align: center;
+  width: 690px;
+}
+.about ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 * {
@@ -91,6 +111,16 @@ a:hover {
 
 img {
   display: block;
+}
+
+.links {
+  text-decoration: underline;
+  text-decoration-thickness: 1.3px;
+  text-underline-offset: 5px;
+}
+.links p {
+  display: inline;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -19,12 +19,12 @@ function WorkCard({ work }) {
         <h3>{work.title}</h3>
         <p>{work.desc}</p>
         <date> {work.date}</date>
-        <a href={work.link} className="work-links">
+        <a href={work.link} className="links">
           Link
         </a>
 
         <span className="work-youtube-link">
-          <a href={work.youtube} className="work-links">
+          <a href={work.youtube} className="links">
             YouTube
           </a>
           <img src={youtubeIcon} alt="youtube-logo-icon" />
