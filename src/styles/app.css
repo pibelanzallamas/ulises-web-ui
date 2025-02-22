@@ -1,10 +1,10 @@
 nav {
   display: flex;
-  padding: 3rem 3.5rem;
+  padding: 2.3rem 2.5rem;
   justify-content: space-between;
   align-items: center;
 }
-nav p {
+nav .nav-title {
   font-size: 1.6rem;
 }
 nav span {
@@ -28,11 +28,6 @@ nav span {
 
 .work-images {
   position: relative;
-}
-
-.work-arrows {
-  position: absolute;
-  top: 45%;
 }
 
 .work-image {
@@ -60,6 +55,17 @@ nav span {
   text-underline-offset: 5px;
 }
 
+.work-arrows {
+  cursor: pointer;
+}
+
+footer {
+  padding: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -81,6 +87,10 @@ a {
 
 a:hover {
   color: orange;
+}
+
+img {
+  display: block;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -5,15 +5,15 @@ import youtubeIcon from "../assets/youtube-icon.svg";
 
 function WorkCard({ work }) {
   return (
-    <div className="works">
+    <div className="works" style={{ padding: "0rem" }}>
       <div className="work-images">
-        {/* <img src={leftIcon} alt="left-logo-icon" className="work-arrows" /> */}
+        {/* <img src={leftIcon} alt="left-logo-icon" className="work-image-arrows" /> */}
         <img
           src={work.image}
           alt="DreamerPaintings Home Page"
           className="work-image"
         />
-        {/* <img src={rightIcon} alt="left-logo-icon" className="work-arrows" /> */}
+        {/* <img src={rightIcon} alt="left-logo-icon" className="work-image-arrows" /> */}
       </div>
       <div className="work-info">
         <h3>{work.title}</h3>

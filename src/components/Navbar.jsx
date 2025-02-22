@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <nav>
-      <Link to="/">
+      <Link to="/" className="nav-title">
         Ulises Web/UI <span> 🖼️ 👨‍🎨</span>
       </Link>
       <ul className="menu-list">

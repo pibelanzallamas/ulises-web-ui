@@ -5,7 +5,7 @@ const works = [
     link: "https://calles-construction.vercel.app/",
     youtube: "https://www.youtube.com/watch?v=mOV8O6jPwC4",
     github: "https://github.com/pibelanzallamas/calles-construction",
-    desc: "Sitio web para la empresa constructora, Calle's Construction, úbicada en la ciudad de Manhatan, Nueva York, con registro, editado y borrado de trabajos categorizados por rubro, sección de galería, envío de formularío, información de la empresa, contacto, localización y modo admin.",
+    desc: "Sitio web para la empresa contratista, Calle's Construction, úbicada en la ciudad de Manhatan, Nueva York, con registro, editado y borrado de trabajos categorizados por rubro, sección de galería, envío de formularios, información, modo admin, etc.",
     image:
       "https://res.cloudinary.com/daynclfo8/image/upload/v1732610191/calles.png",
     images: [
@@ -62,7 +62,7 @@ const works = [
     link: "https://dreamer-paintings.vercel.app",
     youtube: "https://www.youtube.com/watch?v=onv0uQ7Y_1I",
     github: "https://github.com/pibelanzallamas/dreamers-paintings",
-    desc: "Sitio web realizado para lás pinturas de un telentosisimo amigo del barrio de Palermo, Buenos Aires, Argentina. Contiene información del artista, detalles de las obras, técnica, calendario, exposición de la Obras de manera, digital y de los NFTS.",
+    desc: "Sitio web realizado para lás pinturas de un telentosisimo amigo del barrio de Palermo, Buenos Aires, Argentina. Contiene información del artista, detalles de las obras, técnica, calendario, exposición de la Obras de manera digital y de los NFTS.",
     image:
       "https://res.cloudinary.com/dh71ewqgp/image/upload/v1740057895/dreamer-newww_jovp5n.png",
     images: [

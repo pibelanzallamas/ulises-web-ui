@@ -16,7 +16,7 @@ function Works() {
     <main className="works">
       {workNum > 0 && (
         <img
-          onClick={() => setWorkNum(workNum + 1)}
+          onClick={() => setWorkNum(workNum - 1)}
           onKeyDown={(e) => {
             if (e.key === " " || e.key === "Enter") {
               setWorkNum(workNum + 1);
@@ -26,14 +26,14 @@ function Works() {
           alt="left-logo-icon"
           tabIndex="-2"
           role="button"
+          className="work-arrows"
         />
       )}
+      <WorkCard work={works[workNum]} />
 
-      <WorkCard work={works[1]} />
-
-      {workNum < works.length && (
+      {workNum < works.length - 1 && (
         <img
-          onClick={() => setWorkNum(workNum - 1)}
+          onClick={() => setWorkNum(workNum + 1)}
           onKeyDown={(e) => {
             if (e.key === " " || e.key === "Enter") {
               setWorkNum(workNum - 1);
@@ -43,6 +43,7 @@ function Works() {
           alt="left-logo-icon"
           tabIndex="0"
           role="button"
+          className="work-arrows"
         />
       )}
     </main>
