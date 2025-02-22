@@ -161,7 +161,7 @@ footer {
 .fees-individual span {
   font-size: 3rem;
 }
-.fees-individual p {
+.fees-individual a {
   font-weight: 700;
   font-size: 1.6rem;
   text-decoration: underline;

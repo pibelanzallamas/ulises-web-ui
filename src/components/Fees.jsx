@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Fees() {
   return (
@@ -7,7 +8,9 @@ function Fees() {
       <div className="fees-prices">
         <div className="fees-individual">
           <span>💵</span>
-          <p>Paquete Incial</p>
+          <Link to={"/contact"} state={{ job: "inicial" }}>
+            Paquete Incial
+          </Link>
           <ul>
             <li>Sitio Web</li>
             <li>1 Formulario</li>
@@ -17,7 +20,9 @@ function Fees() {
         </div>
         <div className="fees-individual">
           <span>🛒</span>
-          <p>Paquete Medio</p>
+          <Link to={"/contact"} state={{ job: "medio" }}>
+            Paquete Medio
+          </Link>
           <ul>
             <li>Sitio Web</li>
             <li>1 Formulario</li>
@@ -29,7 +34,9 @@ function Fees() {
         </div>
         <div className="fees-individual">
           <span>💎</span>
-          <p>Paquete Diamante</p>
+          <Link to={"/contact"} state={{ job: "diamante" }}>
+            Paquete Diamante
+          </Link>
           <ul>
             <li>Sitio Web</li>
             <li>1 Formulario</li>

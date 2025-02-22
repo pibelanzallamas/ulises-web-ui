@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 function Contact() {
+  const textareaRef = useRef(null);
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
-  const [msg, setMsg] = useState("");
   const location = useLocation();
+  const [preOrd, setPreOrd] = useState(location.state?.job || "");
+  const [preOrdMsg, setPreOrdMsg] = useState(`¡Hola! ¿Cómo estás?
+Estaría interesado/a en construir un sitio web de plan ${preOrd}...`);
+  const [msg, setMsg] = useState(preOrd ? preOrdMsg : "");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,6 +20,14 @@ function Contact() {
     };
     console.log(obj);
   };
+
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.focus();
+      const length = textareaRef.current.value.length;
+      textareaRef.current.setSelectionRange(length, length);
+    }
+  }, []);
 
   return (
     <main className="contact">
@@ -46,6 +58,7 @@ function Contact() {
           placeholder="Número"
         />
         <textarea
+          ref={textareaRef}
           value={msg}
           onChange={(e) => setMsg(e.target.value)}
           type="text"
