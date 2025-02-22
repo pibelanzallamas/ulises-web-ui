@@ -137,6 +137,49 @@ footer {
   background-color: #1658ff;
 }
 
+.fees {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1rem;
+  gap: 2.5rem;
+}
+
+.fees-prices {
+  display: flex;
+  gap: 8rem;
+}
+
+.fees-individual {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+.fees-individual span {
+  font-size: 3rem;
+}
+.fees-individual p {
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  font-family: Oleo Script Swash Caps;
+  color: #e8652c;
+}
+.fees-individual ul {
+  flex: 1;
+}
+.fees-individual li {
+  margin-left: 20px;
+}
+.fees-individual b {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-family: Oleo Script Swash Caps;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -156,6 +199,7 @@ h3 {
   font-size: 2rem;
   font-family: Oleo Script Swash Caps;
 }
+
 a {
   text-decoration: none;
   color: inherit;

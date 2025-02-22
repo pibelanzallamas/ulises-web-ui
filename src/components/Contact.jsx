@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function Contact() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [msg, setMsg] = useState("");
+  const location = useLocation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
