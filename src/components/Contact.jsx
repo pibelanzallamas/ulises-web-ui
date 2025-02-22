@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { alerts } from "../utils/alerts";
+import emailjs from "emailjs-com";
 
 function Contact() {
   const textareaRef = useRef(null);
@@ -8,17 +10,61 @@ function Contact() {
   const location = useLocation();
   const [preOrd, setPreOrd] = useState(location.state?.job || "");
   const [preOrdMsg, setPreOrdMsg] = useState(`¡Hola! ¿Cómo estás?
-Estaría interesado/a en construir un sitio web de plan ${preOrd}...`);
+Estaría interesado/a en construir un sitio web de paquete ${preOrd}...`);
   const [msg, setMsg] = useState(preOrd ? preOrdMsg : "");
+  const [sending, setSending] = useState(false);
+  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+  const USER_ID = import.meta.env.VITE_USER_ID;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const obj = {
-      name,
-      number,
-      msg,
+    setSending(true);
+
+    const templateParams = {
+      from_name: name,
+      from_number: number,
+      message: msg,
     };
-    console.log(obj);
+
+    console.log(templateParams);
+    console.log(SERVICE_ID, TEMPLATE_ID, USER_ID);
+
+    try {
+      const res = await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        templateParams,
+        USER_ID
+      );
+
+      if (res) {
+        alerts(
+          "Gracias por su mensaje!",
+          "Recibira una respuesta en pocos minutos.",
+          "success"
+        );
+
+        setName("");
+        setNumber("");
+        setMsg("");
+        setSending(false);
+      } else {
+        alerts(
+          "Lo siento!",
+          "Hubo un problema en el servidor, intente de nuevo.",
+          "warning"
+        );
+      }
+    } catch (e) {
+      alerts(
+        "Lo siento!",
+        "Hubo un problema en el servidor, intente por otro medio.",
+        "warning"
+      );
+      console.log(e);
+    }
+    setSending(false);
   };
 
   useEffect(() => {
@@ -49,12 +95,14 @@ Estaría interesado/a en construir un sitio web de plan ${preOrd}...`);
           value={name}
           onChange={(e) => setName(e.target.value)}
           type="text"
+          required
           placeholder="Nombre"
         />
         <input
           vale={number}
           onChange={(e) => setNumber(e.target.value)}
-          type="text"
+          type="number"
+          required
           placeholder="Número"
         />
         <textarea
@@ -62,9 +110,11 @@ Estaría interesado/a en construir un sitio web de plan ${preOrd}...`);
           value={msg}
           onChange={(e) => setMsg(e.target.value)}
           type="text"
+          required
           placeholder="Presupuesto Gratis!"
           rows={8}
         />
+
         <button type="submit">Enviar!</button>
       </form>
     </main>

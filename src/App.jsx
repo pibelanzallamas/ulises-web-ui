@@ -13,8 +13,8 @@ function App() {
     <div className="all-all">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<About />} />
+        {/* <Route path="/about" element={<About />} /> */}
         <Route path="/works" element={<Works />} />
         <Route path="/fees" element={<Fees />} />
         <Route path="/contact" element={<Contact />} />

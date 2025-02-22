@@ -16,7 +16,7 @@ function Fees() {
             <li>1 Formulario</li>
             <li>Imagénes</li>
           </ul>
-          <b>$150.000</b>
+          <b>$70.000</b>
         </div>
         <div className="fees-individual">
           <span>🛒</span>
@@ -27,10 +27,10 @@ function Fees() {
             <li>Sitio Web</li>
             <li>1 Formulario</li>
             <li>Imagénes</li>
-            <li>Url Personaliada</li>
+            <li>URL Personalizada</li>
             <li>Mantenimiento</li>
           </ul>
-          <b>$250.000</b>
+          <b>$150.000</b>
         </div>
         <div className="fees-individual">
           <span>💎</span>
@@ -41,13 +41,13 @@ function Fees() {
             <li>Sitio Web</li>
             <li>1 Formulario</li>
             <li>Imagénes</li>
-            <li>Url Personaliada</li>
+            <li>URL Personalizada</li>
             <li>Vídeos</li>
             <li>Mantenimiento</li>
             <li>Base de Datos</li>
             <li>Actualizaciones</li>
           </ul>
-          <b>$450.000</b>
+          <b>$250.000</b>
         </div>
       </div>
     </main>
