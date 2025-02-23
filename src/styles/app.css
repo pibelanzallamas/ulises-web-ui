@@ -18,6 +18,36 @@ nav span {
   font-size: 1.1rem;
 }
 
+.hamburger-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+  nav .nav-title {
+    font-size: 1.2rem;
+  }
+  nav span {
+    font-size: 1.2rem;
+  }
+  .hamburger-icon {
+    display: flex;
+  }
+  .menu-list {
+    display: none;
+  }
+  .mobile-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
 .works {
   flex: 1;
   display: flex;
@@ -54,6 +84,24 @@ nav span {
   cursor: pointer;
 }
 
+.mobile-arrow {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-arrow {
+    display: none;
+  }
+  .mobile-arrow {
+    display: flex;
+  }
+  .works {
+    flex-direction: column;
+  }
+  .work-image {
+    width: 100%;
+  }
+}
 footer {
   padding: 2.5rem;
   display: flex;
@@ -61,6 +109,11 @@ footer {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  footer {
+    padding: 1rem 2rem;
+  }
+}
 .about {
   display: flex;
   flex-direction: column;
@@ -70,9 +123,9 @@ footer {
   width: 100ch;
   margin: 0 auto;
   margin-top: 3rem;
+  text-align: center;
 }
 .about p {
-  text-align: center;
   width: 690px;
 }
 .about ul {
@@ -81,6 +134,21 @@ footer {
   justify-content: space-between;
 }
 
+@media (max-width: 768px) {
+  .about {
+    margin-top: 1rem;
+    padding: 1rem 1.7rem;
+    width: 100%;
+    gap: 1.5rem;
+  }
+  .about p {
+    width: 100%;
+  }
+  .about-links a {
+    text-decoration-thickness: 1.4px;
+    text-underline-offset: 2px;
+  }
+}
 .contact {
   display: flex;
   flex-direction: column;
@@ -137,6 +205,11 @@ footer {
   background-color: #1658ff;
 }
 
+@media (max-width: 768px) {
+  .contact {
+    width: 100%;
+  }
+}
 .fees {
   display: flex;
   flex-direction: column;
@@ -172,7 +245,7 @@ footer {
   flex: 1;
 }
 .fees-individual li {
-  margin-left: 20px;
+  list-style-position: inside;
 }
 .fees-individual b {
   margin-top: 2rem;
@@ -180,13 +253,28 @@ footer {
   font-family: Oleo Script Swash Caps;
 }
 
-.home {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 1rem;
+@media (max-width: 768px) {
+  .fees {
+    margin-top: 1rem;
+    padding: 1rem 1.7rem;
+    width: 100%;
+    gap: 1.5rem;
+  }
+  .fees h3 {
+    font-size: 2rem;
+  }
+  .fees-prices {
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+  .fees-prices li {
+    list-style-type: none;
+    margin-left: 0px;
+  }
+  .fees-prices b {
+    margin-top: 1rem;
+  }
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -229,6 +317,12 @@ img {
 .links p {
   display: inline;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.9rem;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

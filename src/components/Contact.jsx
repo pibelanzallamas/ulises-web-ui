@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, CSSProperties } from "react";
 import { useLocation } from "react-router-dom";
 import { alerts } from "../utils/alerts";
 import emailjs from "emailjs-com";
@@ -26,9 +26,6 @@ Estaría interesado/a en construir un sitio web de paquete ${preOrd}...`);
       from_number: number,
       message: msg,
     };
-
-    console.log(templateParams);
-    console.log(SERVICE_ID, TEMPLATE_ID, USER_ID);
 
     try {
       const res = await emailjs.send(

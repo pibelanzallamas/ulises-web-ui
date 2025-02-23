@@ -13,3 +13,30 @@ nav
   gap: 3rem
   font-size: 1.1rem
 
+.hamburger-icon
+  display: none
+
+.mobile-menu
+  display: none
+
+@media (max-width: 768px)
+  nav
+    padding: 1rem 2rem
+    .nav-title
+      font-size: 1.2rem
+    span
+      font-size: 1.2rem
+
+  .hamburger-icon
+    display: flex
+
+  .menu-list
+    display: none
+
+  .mobile-menu
+    display: flex
+    justify-content: center
+    gap: 1rem
+
+  
+  

@@ -6,7 +6,6 @@
   margin: 0 auto
   margin-top: 1rem
   gap: 2.5rem
-  // width: 30rem
 
 .fees-prices
   display: flex
@@ -28,8 +27,27 @@
   ul
     flex: 1
   li
-    margin-left: 20px
+    // margin-left: 20px
+    list-style-position: inside
   b
     margin-top: 2rem
     font-size: 1.8rem
     font-family: Oleo Script Swash Caps
+
+@media (max-width: 768px)
+  .fees
+    margin-top: 1rem
+    padding: 1rem 1.7rem
+    width: 100%
+    gap: 1.5rem
+    h3
+      font-size: 2rem
+  .fees-prices
+    flex-direction: column
+    gap: 3.5rem
+    ul
+    li
+      list-style-type: none
+      margin-left: 0px
+    b
+      margin-top: 1rem

@@ -26,10 +26,26 @@ function Works() {
           alt="left-logo-icon"
           tabIndex="-2"
           role="button"
-          className="work-arrows"
+          className="work-arrows desktop-arrow"
         />
       )}
       <WorkCard work={works[workNum]} />
+
+      {workNum > 0 && (
+        <img
+          onClick={() => setWorkNum(workNum - 1)}
+          onKeyDown={(e) => {
+            if (e.key === " " || e.key === "Enter") {
+              setWorkNum(workNum + 1);
+            }
+          }}
+          src={leftIcon}
+          alt="left-logo-icon"
+          tabIndex="-2"
+          role="button"
+          className="work-arrows mobile-arrow"
+        />
+      )}
 
       {workNum < works.length - 1 && (
         <img

@@ -18,7 +18,7 @@ function About() {
         </Link>
         ó comunicate con mis redes de contancto.
       </p>
-      <ul>
+      <ul className="about-links">
         <a
           href="https://api.constata.eu/certificate/research+riding+veal+bonfire+dedicator"
           target="_blank"
