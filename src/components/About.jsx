@@ -10,13 +10,13 @@ function About() {
         me egresé como Desarrollador Full Stack en un Bootcamp de Plataforma 5 y
         desde entonces no he parado de crear sitios web inspiradores y
         desafientes. Desarrollo sitios para marcas personales, pymes, comercios,
-        artesanias, artesanos, pequeños locales, gimnasios, esteticas, y muchos
-        más. Diseño y desarrollo apartir de un idea principal y del branding de
-        la marca. Para hacer tu consulta ingresá
+        artesanias, artesanos y muchos más. Diseño y desarrollo apartir de un
+        idea principal y del branding de la marca. Para hacer tu consulta
+        ingresá
         <Link to="/contact" className="links special-word">
-          <p> acá </p>
+          <p>&nbsp;acá&nbsp;</p>
         </Link>
-        ó comunicate con mis redes de contancto.
+        ó comunicate con mis redes de contacto.
       </p>
       <ul className="about-links">
         <a
