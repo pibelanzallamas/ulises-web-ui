@@ -34,9 +34,15 @@ function Navbar({}) {
       </nav>
       {clicked && (
         <div className="mobile-menu">
-          <Link to="/works">Mis Sitios</Link>
-          <Link to="/fees">Mis Aranceles</Link>
-          <Link to="/contact">Contacto</Link>
+          <Link onClick={() => handleHambu(false)} to="/works">
+            Mis Sitios
+          </Link>
+          <Link onClick={() => handleHambu(false)} to="/fees">
+            Mis Aranceles
+          </Link>
+          <Link onClick={() => handleHambu(false)} to="/contact">
+            Contacto
+          </Link>
         </div>
       )}
     </>
