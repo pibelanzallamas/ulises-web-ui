@@ -98,7 +98,6 @@ Estaría interesado/a en construir un sitio web de paquete ${preOrd}...`);
         <input
           vale={number}
           onChange={(e) => setNumber(e.target.value)}
-          type="number"
           required
           placeholder="Número"
         />
