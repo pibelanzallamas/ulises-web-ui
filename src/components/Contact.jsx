@@ -74,16 +74,17 @@ Estaría interesado/a en construir un sitio web de paquete ${preOrd}...`);
   }, []);
 
   // Función para copiar el número al portapapeles
-  function handleCopy() {
-    const numero = "notasbrandon@icloud.com";
+  function handleCopy(copy) {
+    const code = copy == "n" ? "1139241058" : "notabrandon@icloud.com";
+    const title = copy == "n" ? "Número" : "Email";
 
     navigator.clipboard
-      .writeText(numero)
+      .writeText(code)
       .then(() => {
-        alerts("Ok!", "Email copiado a portapapeles!", "success");
+        alerts("Ok!", `${title} copiado a portapapeles!`, "success");
       })
-      .catch((error) => {
-        console.error("Error al copiar: ", error);
+      .catch((err) => {
+        console.error("Error al copiar: ", err);
         alerts("Oh!", "Email no se pudo copiar a portapapeles!", "success");
       });
   }
@@ -93,19 +94,29 @@ Estaría interesado/a en construir un sitio web de paquete ${preOrd}...`);
       <h3>Contacto</h3>
       <div className="contact-info">
         <p>
-          <span>📲</span> +54 9 11-3924-1058
-        </p>
-        <p className="email-row">
-          <span>📩</span> notasbrandon@icloud.com
+          <span>📲</span> 11-3924-1058
           <img
             onKeyDown={(e) => {
               if (e.key === " " || e.key === "Enter") {
-                handleCopy();
+                handleCopy("n");
               }
             }}
             tabIndex="0"
             src={clipboard}
-            onClick={() => handleCopy()}
+            onClick={() => handleCopy("n")}
+          />
+        </p>
+        <p>
+          <span>📩</span> notasbrandon@icloud.com
+          <img
+            onKeyDown={(e) => {
+              if (e.key === " " || e.key === "Enter") {
+                handleCopy("e");
+              }
+            }}
+            tabIndex="0"
+            src={clipboard}
+            onClick={() => handleCopy("e")}
           />
         </p>
 
