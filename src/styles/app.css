@@ -292,7 +292,7 @@ footer {
 
 h3 {
   color: #6791E0;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: Oleo Script Swash Caps;
 }
 
@@ -317,6 +317,11 @@ img {
 .links p {
   display: inline;
   font-weight: 600;
+}
+
+.special-word {
+  text-underline-offset: 3px;
+  color: #6791E0;
 }
 
 @media (max-width: 768px) {
