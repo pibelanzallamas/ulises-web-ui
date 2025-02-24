@@ -138,6 +138,7 @@ Estaría interesado/a en construir un sitio web de paquete ${preOrd}...`);
           onChange={(e) => setNumber(e.target.value)}
           required
           placeholder="Número"
+          type="number"
         />
         <textarea
           ref={textareaRef}
