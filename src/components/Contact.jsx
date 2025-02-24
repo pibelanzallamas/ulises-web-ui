@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useRef, CSSProperties } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { alerts } from "../utils/alerts";
 import emailjs from "emailjs-com";
+import clipboard from "../assets/copy.svg";
 
 function Contact() {
   const textareaRef = useRef(null);
@@ -72,16 +73,42 @@ Estaría interesado/a en construir un sitio web de paquete ${preOrd}...`);
     }
   }, []);
 
+  // Función para copiar el número al portapapeles
+  function handleCopy() {
+    const numero = "notasbrandon@icloud.com";
+
+    navigator.clipboard
+      .writeText(numero)
+      .then(() => {
+        alerts("Ok!", "Email copiado a portapapeles!", "success");
+      })
+      .catch((error) => {
+        console.error("Error al copiar: ", error);
+        alerts("Oh!", "Email no se pudo copiar a portapapeles!", "success");
+      });
+  }
+
   return (
     <main className="contact">
-      <h3>Contact</h3>
+      <h3>Contacto</h3>
       <div className="contact-info">
         <p>
-          <span>📲</span> 1139241058
+          <span>📲</span> +54 9 11-3924-1058
         </p>
-        <p>
-          <span>📩</span> brancastillo.developer@icloud.com
+        <p className="email-row">
+          <span>📩</span> notasbrandon@icloud.com
+          <img
+            onKeyDown={(e) => {
+              if (e.key === " " || e.key === "Enter") {
+                handleCopy();
+              }
+            }}
+            tabIndex="0"
+            src={clipboard}
+            onClick={() => handleCopy()}
+          />
         </p>
+
         <p>
           <span>📍</span> Buenos Aires, Argentina
         </p>

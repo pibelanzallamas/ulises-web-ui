@@ -4,16 +4,14 @@ import { Link } from "react-router-dom";
 function About() {
   return (
     <main className="about">
-      {/* <h3>Desarrollador Full Stack</h3> */}
       <h3>Desarrollo Web de Sitios Personificados</h3>
       <p>
         Hola! Me llamo Brandon y soy un apasionado por el diseño de páginas web,
-        me egresé como Desarrollador Full Stack en un Bootcamp de Plataforma 5 y
-        desde entonces no he parado de crear sitios web inspiradores y
-        desafientes. Desarrollo sitios para marcas personales, pymes, comercios,
-        artesanias, artesanos y muchos más. Diseño y desarrollo apartir de un
-        idea principal y del branding de la marca. Para hacer tu consulta
-        ingresá&nbsp;
+        me egresé como desarrollador Full Stack en un Bootcamp y desde entonces
+        no he parado de crear sitios web inspiradores y desafientes. Desarrollo
+        sitios para marcas personales, pymes, comercios, artesanias, y mucho
+        más. Diseño y desarrollo apartir de un idea principal y del branding de
+        la marca. Para hacer tu consulta ingresá&nbsp;
         <Link to="/contact" className="links special-word">
           <p>acá</p>
         </Link>
